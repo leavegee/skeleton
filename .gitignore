@@ -1,4 +1,14 @@
-/webapp/WEB-INF/classes
-*.JSCompress
-/target
+*.class
 /.idea
+# Package Files #
+# *.jar #
+*.war
+*.ear
+/logs
+/autopath
+/target
+/.settings
+/.settings/*
+/.classpath
+/.project
+/bin

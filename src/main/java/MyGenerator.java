@@ -52,7 +52,7 @@ public class MyGenerator {
         });
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("root");
+        dsc.setPassword("");
         dsc.setUrl("jdbc:mysql://127.0.0.1:3306/skeleton_shiro?characterEncoding=utf8");
         mpg.setDataSource(dsc);
 
@@ -60,8 +60,8 @@ public class MyGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setTablePrefix(new String[]{"t_"});// 此处可以修改为您的表前缀
         strategy.setNaming(NamingStrategy.remove_prefix_and_camel);// 表名生成策略
-        // strategy.setInclude(new String[] { "user" }); // 需要生成的表
-        strategy.setExclude(new String[]{"t_user","t_role","t_permission"}); // 排除生成的表
+        strategy.setInclude(new String[] { "t_sample" }); // 需要生成的表
+        //strategy.setExclude(new String[]{"t_user","t_role","t_permission"}); // 排除生成的表
         // 字段名生成策略
         strategy.setFieldNaming(NamingStrategy.underline_to_camel);
         // 自定义实体父类
@@ -87,7 +87,7 @@ public class MyGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setParent("com.fcs");
-        pc.setModuleName("admin");
+        pc.setModuleName("business");
 //        pc.setController("controller");
 
         mpg.setPackageInfo(pc);
@@ -128,7 +128,7 @@ public class MyGenerator {
         mpg.execute();
 
         // 打印注入设置
-        System.err.println(mpg.getCfg().getMap().get("abc"));
+        //System.err.println(mpg.getCfg().getMap().get("abc"));
     }
 
 }
