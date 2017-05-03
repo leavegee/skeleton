@@ -1,7 +1,7 @@
 package com.fcs.business.rest;
 
 import com.fcs.business.entity.Sample;
-import com.fcs.microservice.AccountService;
+//import com.fcs.microservice.AccountService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -19,17 +19,12 @@ public class SampleController {
     // 创建线程安全的Map 
     static Map<Long, Sample> samples = Collections.synchronizedMap(new HashMap<Long, Sample>());
 
-    @Autowired
-    private AccountService accountService;
-
-
-
-
-
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add() {
-        return accountService.add(10, 20);
-    }
+//    @Autowired
+//    private AccountService accountService;
+//    @RequestMapping(value = "/add", method = RequestMethod.GET)
+//    public Integer add() {
+//        return accountService.add(10, 20);
+//    }
 
 
 

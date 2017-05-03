@@ -8,8 +8,8 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @MapperScan("com.fcs.*.mapper*")
 @SpringBootApplication
-@EnableDiscoveryClient
-@EnableFeignClients
+//@EnableDiscoveryClient
+//@EnableFeignClients
 public class Application {
 
 	/**
