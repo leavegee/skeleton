@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+    <script src="admin/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+</head>
+<body>
+<input type="button" value="测试jsonp请求" onclick="testJsonp()" />
+<script type="text/javascript">
+    function testJsonp() {
+        $.ajax({
+            type:'get',
+            url:'http://localhost:3333/testJsonp',
+            dataType:'jsonp',
+            jsonp:"callback",
+            success:function (data) {
+                alert(data.age+"  "+data.name);
+            },
+            error:function (err) {
+                alert('出现错误了!!!');
+            }
+        });
+    }
+</script>
+</body>

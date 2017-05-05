@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bobanngame.blog.logic.mapper.ContentMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.bobanngame.blog.logic.entity.Content">
+		<id column="id" property="id" />
+		<result column="title" property="title" />
+		<result column="text" property="text" />
+		<result column="summary" property="summary" />
+		<result column="link_to" property="linkTo" />
+		<result column="markdown_enable" property="markdownEnable" />
+		<result column="thumbnail" property="thumbnail" />
+		<result column="module" property="module" />
+		<result column="style" property="style" />
+		<result column="user_id" property="userId" />
+		<result column="author" property="author" />
+		<result column="user_email" property="userEmail" />
+		<result column="user_ip" property="userIp" />
+		<result column="user_agent" property="userAgent" />
+		<result column="parent_id" property="parentId" />
+		<result column="object_id" property="objectId" />
+		<result column="order_number" property="orderNumber" />
+		<result column="status" property="status" />
+		<result column="vote_up" property="voteUp" />
+		<result column="vote_down" property="voteDown" />
+		<result column="rate" property="rate" />
+		<result column="rate_count" property="rateCount" />
+		<result column="price" property="price" />
+		<result column="comment_status" property="commentStatus" />
+		<result column="comment_count" property="commentCount" />
+		<result column="comment_time" property="commentTime" />
+		<result column="view_count" property="viewCount" />
+		<result column="created" property="created" />
+		<result column="modified" property="modified" />
+		<result column="slug" property="slug" />
+		<result column="flag" property="flag" />
+		<result column="lng" property="lng" />
+		<result column="lat" property="lat" />
+		<result column="meta_keywords" property="metaKeywords" />
+		<result column="meta_description" property="metaDescription" />
+		<result column="remarks" property="remarks" />
+	</resultMap>
+
+</mapper>

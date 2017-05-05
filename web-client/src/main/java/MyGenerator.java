@@ -26,7 +26,7 @@ public class MyGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
 //        gc.setOutputDir("D:\\devData\\IdeaProjects\\skeleton\\src\\main\\java");
-        gc.setOutputDir("D:\\test");
+        gc.setOutputDir("D:\\test1");
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
         gc.setEnableCache(false);// XML 二级缓存
@@ -61,9 +61,9 @@ public class MyGenerator {
 
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setTablePrefix(new String[]{"t_"});// 此处可以修改为您的表前缀
+        strategy.setTablePrefix(new String[]{"blog_"});// 此处可以修改为您的表前缀
         strategy.setNaming(NamingStrategy.remove_prefix_and_camel);// 表名生成策略
-        strategy.setInclude(new String[] { "t_sample" }); // 需要生成的表
+        strategy.setInclude(new String[] { "blog_user","blog_taxonomy","blog_attachment","blog_comment","blog_content","blog_mapping","blog_metadata","blog_option" }); // 需要生成的表
         //strategy.setExclude(new String[]{"t_user","t_role","t_permission"}); // 排除生成的表
         // 字段名生成策略
         strategy.setFieldNaming(NamingStrategy.underline_to_camel);
@@ -90,7 +90,7 @@ public class MyGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setParent("com.bobanngame.blog");
-        pc.setModuleName("business");
+        pc.setModuleName("logic");
 //        pc.setController("controller");
 
         mpg.setPackageInfo(pc);

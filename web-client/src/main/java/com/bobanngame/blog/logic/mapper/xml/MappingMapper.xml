@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bobanngame.blog.logic.mapper.MappingMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.bobanngame.blog.logic.entity.Mapping">
+		<id column="id" property="id" />
+		<result column="content_id" property="contentId" />
+		<result column="taxonomy_id" property="taxonomyId" />
+	</resultMap>
+
+</mapper>
